@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/weather.png" />
+    <title>Home | Node - weather app</title>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <script defer src="/js/app.js"></script>
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Use this site to get your weather</p>
+        <form>
+            <input placeholder="Location"/>
+            <button type="submit">Search</button>
+        </form>
+
+        <h4 id="message-header"></h4>
+        <p id="message-body"></p>
+    </div>
+    {{>footer}}
+</body>
+</html>
