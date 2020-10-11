@@ -16,7 +16,15 @@ weatherForm.addEventListener("submit", (e) => {
         messageHeader.textContent = "Error";
         messageBody.textContent = data.error;
       } else {
-        messageHeader.textContent = data.location;
+        const icon = document.createElement("img");
+        icon.src = data.iconUrl;
+        icon.style.paddingRight = "8px";
+        icon.style.marginBottom = "-2px";
+        icon.style.width = "30px";
+        messageHeader.appendChild(icon);
+        const text = document.createElement("span");
+        text.textContent = data.location;
+        messageHeader.appendChild(text);
         messageBody.textContent = data.forecast;
       }
     });
